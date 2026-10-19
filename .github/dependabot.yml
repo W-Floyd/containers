@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: docker
+    directories:
+      - /caddy-umami
+      - /caddy-cloudflare-umami
+    schedule:
+      interval: weekly
+    groups:
+      caddy:
+        patterns: ["caddy"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
